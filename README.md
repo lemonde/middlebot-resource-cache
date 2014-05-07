@@ -1,4 +1,7 @@
 # middlebot-resource-cache
+[![Build Status](https://travis-ci.org/lemonde/middlebot-resource-cache.svg?branch=master)](https://travis-ci.org/lemonde/middlebot-resource-cache)
+[![Dependency Status](https://david-dm.org/lemonde/middlebot-resource-cache.svg?theme=shields.io)](https://david-dm.org/lemonde/middlebot-resource-cache)
+[![devDependency Status](https://david-dm.org/lemonde/middlebot-resource-cache/dev-status.svg?theme=shields.io)](https://david-dm.org/lemonde/middlebot-resource-cache#info=devDependencies)
 
 Middlebot resource cache middleware based on redis.
 
