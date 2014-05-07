@@ -1,9 +1,9 @@
 {
   "name": "cache-middlewares",
-  "description": "middlewares to cache data using Redis",
+  "description": "Middlebot cache middleware based on redis.",
   "version": "0.1.0",
   "scripts": {
-    "test": "mocha test/ --recursive"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -12,15 +12,15 @@
   "author": "Yannick Dominguez <yannick.dominguez@gmail.com>",
   "main": "lib/index.js",
   "dependencies": {
-    "lodash": "~2.4.1",
-    "checksum": "~0.1.1",
-    "underscore.string": "~2.3.3"
+    "checksum": "^0.1.1",
+    "lodash": "^2.4.1",
+    "underscore.string": "^2.3.3"
   },
   "devDependencies": {
-    "sinon": "~1.7.3",
-    "sinon-chai": "~2.4.0",
-    "chai-things": "~0.2.0",
-    "chai": "~1.7.2",
-    "mocha": "~1.13.0"
+    "chai": "^1.9.1",
+    "chai-things": "^0.2.0",
+    "mocha": "^1.18.2",
+    "sinon": "^1.9.1",
+    "sinon-chai": "^2.5.0"
   }
 }
