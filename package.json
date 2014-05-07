@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/lemonde/cache-middlewares.git"
+    "url": "git://github.com/lemonde/middlebot-resource-cache.git"
   },
   "author": "Yannick Dominguez <yannick.dominguez@gmail.com>",
   "main": "index.js",
