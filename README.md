@@ -20,7 +20,7 @@ var cache = require('middlebot-resource-cache')();
 
 app.use(cache.read); // Read an serve the cache.
 app.use(cache.populate); // Populate the cache.
-app.use(cache.invalid); // Invalid the cache.
+app.use(cache.invalidate); // Invalid the cache.
 ```
 
 ### middlebotResourceCache(options)
