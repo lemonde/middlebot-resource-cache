@@ -29,7 +29,7 @@ app.use(cache.invalidate); // Invalid the cache.
 
 To know avalaible cachou options, please refer to [cachou](https://github.com/neoziro/cachou#cachouoptions--new-cachoucacheoptions).
 
-#### name
+#### options.name
 
 Name of the resource to cache.
 
