@@ -8,7 +8,7 @@ Middlebot resource cache middleware based on redis.
 ## Install
 
 ```sh
-npm install middlebot-resource-cache
+npm install https://github.com/lemonde/middlebot-resource-cache.git
 ```
 
 ## Usage
