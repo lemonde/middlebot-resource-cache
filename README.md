@@ -18,9 +18,9 @@ var middlebot = require('middlebot');
 var app = middlebot();
 var cache = require('middlebot-resource-cache')();
 
-app.use(cache.read); // Read an serve the cache.
-app.use(cache.populate); // Populate the cache.
-app.use(cache.invalidate); // Invalid the cache.
+app.use(cache.read()); // Read an serve the cache.
+app.use(cache.populate()); // Populate the cache.
+app.use(cache.invalidate()); // Invalid the cache.
 ```
 
 ### middlebotResourceCache(options)
@@ -31,19 +31,31 @@ To know avalaible cachou options, please refer to [cachou](https://github.com/ne
 
 #### options.name
 
-Name of the resource to cache.
+Name of the resource to cache. The name can be overrided in each method.
 
-### cache.read
+### cache.read(options)
 
 Read and serve the cache if avalaible.
 
-### cache.populate
+```js
+app.use(cache.read({ name: 'myResource' }));
+```
+
+### cache.populate(options)
 
 Populate the cache with `res.body`.
 
-### cache.invalidate
+```js
+app.use(cache.populate({ name: 'myResource' }));
+```
+
+### cache.invalidate(options)
 
 Invalid the cache of the resource. All cached resource with name and id will be invalidated.
+
+```js
+app.use(cache.invalidate({ name: 'myResource' }));
+```
 
 ## Cache key
 

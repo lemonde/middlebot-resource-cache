@@ -40,10 +40,19 @@ describe('Middlebot resource cache', function() {
       });
 
       it('should serve the cache', function (done) {
-        app.use(resourceCache.read);
+        app.use(resourceCache.read());
         app.handle('default', req, res, function (err, req, res) {
           if (err) return done(err);
           expect(res.body).to.eql({ foo: 'bar' });
+          done();
+        });
+      });
+
+      it('should be possible to specify the name', function (done) {
+        app.use(resourceCache.read({ name: 'test' }));
+        app.handle('default', req, res, function (err, req, res) {
+          if (err) return done(err);
+          expect(res.body).to.not.exists;
           done();
         });
       });
@@ -51,7 +60,7 @@ describe('Middlebot resource cache', function() {
 
     describe('with unpopulated cache', function () {
       it('should do nothing', function (done) {
-        app.use(resourceCache.read);
+        app.use(resourceCache.read());
         app.handle('default', req, res, function (err, req, res) {
           if (err) return done(err);
           expect(res.body).to.not.exists;
@@ -63,7 +72,7 @@ describe('Middlebot resource cache', function() {
 
   describe('#populate', function () {
     it('should populate the cache asynchronously', function (done) {
-      app.use(resourceCache.populate);
+      app.use(resourceCache.populate());
       app.handle('default', req, { body: 'test' }, function (err) {
         if (err) return done(err);
 
@@ -93,7 +102,7 @@ describe('Middlebot resource cache', function() {
     });
 
     it('should invalidate the cache asynchronously', function (done) {
-      app.use(resourceCache.invalidate);
+      app.use(resourceCache.invalidate());
       app.handle('default', req, req, function (err) {
         if (err) return done(err);
         resourceCache._cachou.get(resourceKey, function (err, cacheRes) {
