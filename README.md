@@ -65,6 +65,15 @@ The cache key is computed from the `req.query`. The key is formatted as followin
 {name}:{req.query.id}:{req.query}
 ```
 
+The module is exposed and can be used in test for example:
+
+```js
+var cacheKey = require('middlebot-resource-cache').cacheKey;
+var key = cacheKey.format('myResource', 12, query);
+
+console.log(key); // myResource:12:12dea96fec20593566ab75692c9949596833adc9
+```
+
 ## License
 
 MIT
